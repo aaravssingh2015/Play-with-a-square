@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play with a rectangle</title>
+</head>
+<style>
+    body {
+        font-family: cursive;
+    }
+    h2 {
+        text-align: center;
+    }
+    .rectangle {
+        border: 1px solid black;
+        width: 200px;
+        height:200px;
+        margin: auto;
+    }
+    .buttons {
+        padding: 20px;
+        width: 200px;
+        margin: auto;
+        text-align: center;
+    }
+</style>
+<body>
+    <h2>Make changes to the rectangle</h2>
+    <div class="rectangle"></div>
+
+    <div class="buttons">
+        <button onclick="changeToRectangle()">Make it a square with rounded corners </button>
+        <button onclick="changeToCircle()">Make circle</button>
+        <button onclick="hideRect()">Hide</button>
+        <button onclick="showRect()">Show</button>
+        </div>
+
+        <script>
+            let div = document.querySelector(".rectangle");
+
+            function changeToRectangle() {
+                div.style.borderRadius = "10%"
+            }
+
+            function changeToCircle() {
+                div.style.borderRadius = "50%";
+            }
+
+            function hideRect() {
+                div.style.display = "none";
+            }
+
+            function showRect() {
+                div.style.display = "block";
+            };
+
+            div.onmouseenter = function () {
+                div.style.background = "red";
+            };
+
+            div.onmouseleave = function () {
+                div.style.background = "transparent";
+            };
+        </script>            
+<body>
+</html>
